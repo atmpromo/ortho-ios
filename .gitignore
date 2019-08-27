@@ -1,0 +1,9 @@
+node_modules/
+plugins/
+platforms/
+www/
+.DS_Store
+.idea
+.sourcemaps
+package-lock.json
+

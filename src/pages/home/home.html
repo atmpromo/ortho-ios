@@ -1,0 +1,45 @@
+<ion-header class="skin skin-white">
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Home</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="white">
+
+    <ion-card class="card-more-content bdra-5" *ngFor="let tree of pages, let i = index">
+        <div class="active" class="wrapper" (click)="openPage(tree)">
+            <div class="thumb">
+                <img src="./assets/imgs/{{'bg' + (i + 1) + '.png'}}"/>
+
+                <ion-card-content class="black-opct text-white">
+                    <ion-card-title class="text-white uppercase spacing-1 fw-600 fs-16">{{tree.title}}</ion-card-title>
+                    <span class="info-stt text-white inline-block"><ion-icon name="md-stats"></ion-icon></span>
+                </ion-card-content>
+
+                <ion-item class="btn-open-more transparent">
+                    <ion-label class="text-white">
+                        <ion-icon name="{{tree.icon}}"></ion-icon>
+                        <!--<ion-icon name="md-list"></ion-icon>-->
+                    </ion-label>
+                </ion-item>
+            </div>
+
+            <ion-list class="tree mgb-0" *ngFor="let item of tree.group, let i = index">
+                <ion-row>
+                    <button ion-item class="fs-14">
+                        <ion-label class="text-grey-5">
+                            <ion-icon class="fs-22 text-grey-5 mgt-10" name="{{item.icon}}"
+                                      style="margin-top: -3px!important"></ion-icon>
+                            {{item.title}}
+                        </ion-label>
+                    </button>
+                </ion-row>
+            </ion-list>
+
+        </div>
+    </ion-card>
+
+</ion-content>

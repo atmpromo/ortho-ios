@@ -1,0 +1,28 @@
+<!--
+  Generated template for the HowtogetPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header class="skin skin-white">
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>How to get there?</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="white">
+    <div class="white about-v1" *ngIf="data!=null">
+        <div class="map ani-left-to-right">
+            <iframe [src]="data.google_map" width="100%" height="100%" frameborder="0" style="border:0"
+                    id="newsframe"></iframe>
+        </div>
+    </div>
+
+    <button ion-button color="dark" block class="showOnMapBtn" (click)="openNativeMapApp()">Get direction</button>
+
+</ion-content>

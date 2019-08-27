@@ -1,0 +1,35 @@
+  <ion-menu class="skin skin-white" [content]="content" id="menu-avatar">
+
+    <ion-content class="white">
+      
+      <div class="info-user mgb-30 pdt-50 pdb-20 black-opct" *ngIf="false">
+<!--         <button menuClose (click)="logout()" ion-button clear only-icon small class="user-setting text-grey-1">
+          <ion-icon name="md-log-out"></ion-icon>
+        </button> -->
+        <div class="bg-img"><img src="./assets/imgs/bg9.jpg" alt=""></div>
+        <div class="wrapper-avt mgl-15 mgr-10">
+          <img src="./assets/imgs/avt1.jpg" alt="">
+        </div>
+        <div class="main-info">
+          <h2 class="user-name fs-20 fw-600 mg-0 text-white">Koodinh</h2>
+          <button ion-button clear small class="pd-0 mg-0 text-left text-black">koodinh@gmail.com</button>
+        </div>
+      </div>
+
+      <ion-list no-lines class="lst-menu">
+        <span class="">
+          <ion-item class="transparent uppercase mgt-20 fs-14 fw-400 spacing-1">
+            Tableau de bord
+          </ion-item>
+
+          <button menuClose="menu-avatar" ion-item icon-left *ngFor="let sub of pages" class="transparent" (click)="openPage(sub)">
+            <ion-icon name="{{sub.icon}}" item-left></ion-icon>
+            {{sub.title}}
+          </button>
+        </span>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

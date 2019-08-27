@@ -1,0 +1,25 @@
+page-about {
+  .white-1 {
+    //set the height to 100% of the viewport less the height of the header
+    min-height: calc(100vh - 48px);
+
+    //set the width to 100% of the viewport width
+    width: 100vw;
+
+    //remove border, padding, margin
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .dr_image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .about-text, .address-text {
+    white-space: pre-line;
+  }
+}

@@ -1,0 +1,79 @@
+<!--
+  Generated template for the AboutPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header class="skin skin-white">
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>About Us</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content class="white">
+    <div class="white about-v1" *ngIf="data!=null">
+
+        <ion-row>
+            <ion-col text-center>
+                <ion-img src="./assets/imgs/dr.jpg" class="dr_image"></ion-img>
+            </ion-col>
+        </ion-row>
+
+        <div padding class="ani-right-to-left">
+            <div class="find-us mgt-30">
+                <!--<h4 class="fs-26 fw-600">{{data.label.txtGetInTouch}}</h4>-->
+                <p class="text-grey-4 mgb-40 about-text">{{data.about}}</p>
+                <div class="element-find text-grey-4 mgb-10">
+                    <ion-icon class="mgl-10 mgr-20" name="md-pin"></ion-icon>
+                    <p class="mgt-0 address-text">{{data.address1}}</p>
+                </div>
+                <div class="element-find text-grey-4 mgb-10">
+                    <ion-icon class="mgl-10 mgr-20" name="md-call"></ion-icon>
+                    <a href="tel:{{data.phone1}}" class="mgt-0">{{data.phone1}}</a>
+                </div>
+                <div class="element-find text-grey-4 mgb-10">
+                    <ion-icon class="mgl-10 mgr-20" name="md-mail"></ion-icon>
+                    <a href="mailto:{{data.email1}}" class="mgt-0">{{data.email1}}</a>
+                </div>
+                <div class="element-find text-grey-4 mgb-10">
+                    <ion-icon class="mgl-10 mgr-20" name="md-time"></ion-icon>
+                    <p class="mgt-0">
+                        <span class="block mgb-5">{{data.open_time}}</span>
+                        <span class="block mgb-5">{{data.close_time}}</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="social mgt-40 ani-fade-out" *ngIf="false">
+                <h6>{{data.label.txtFollow}}:</h6>
+                <button ion-button only-icon clear class="text-grey-4">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </button>
+                <button ion-button only-icon clear class="text-grey-4">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </button>
+                <button ion-button only-icon clear class="text-grey-4">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </button>
+                <button ion-button only-icon clear class="text-grey-4">
+                    <ion-icon name="logo-google"></ion-icon>
+                </button>
+                <button ion-button only-icon clear class="text-grey-4">
+                    <ion-icon name="logo-pinterest"></ion-icon>
+                </button>
+                <button ion-button only-icon clear class="text-grey-4">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </button>
+                <button ion-button only-icon clear class="text-grey-4">
+                    <ion-icon name="logo-dribbble"></ion-icon>
+                </button>
+            </div>
+        </div>
+    </div>
+</ion-content>
+
+
